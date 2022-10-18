@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-#E Link
+## Link
 
 https://robertrish.github.io/rock-paper-scissors/
 
