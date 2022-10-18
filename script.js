@@ -73,6 +73,9 @@ function playRound(playerSelection, computerSelection) {
 let score = 0;
 
 function game() {
+  window.alert(
+    "Hello!  Let's play the cult classic game, 'Rock, Paper, Scissors'!  When you click 'OK' below, you will start a game of rock, paper, scissors against a computer consisting of 5 rounds.  At the end of the 5 rounds, your score will be displayed.  Good luck!"
+  );
   for (let i = 0; i < 5; i++) {
     const playerSelection = window.prompt("Rock, Paper, or Scissors?");
     const computerSelection = getComputerChoice();
