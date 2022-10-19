@@ -88,4 +88,5 @@ function game() {
   window.alert("You got a score of: " + score);
 }
 
+// Runs program
 game();
