@@ -1,9 +1,14 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
 let playerSelection = "";
+let score = 0;
+let compScore = 0;
 // const computerSelection = getComputerChoice();
 
+// DOM selectors
 const outputDiv = document.querySelector('.output');
+const scoreDiv = document.querySelector('.score');
+const compScoreDiv = document.querySelector('.comp-score');
 
 function getComputerChoice() {
   const random = Math.floor(Math.random() * choices.length);
@@ -15,6 +20,8 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection == "ROCK" && computerSelection == "Paper") {
     console.log("You lose!  Paper covers rock :/");
     outputDiv.textContent = "You lose!  Paper covers rock :/";
+    compScore++;
+    compScoreDiv.textContent = compScore;
   } else if (
     playerSelection == "ROCK" &&
     computerSelection == "Scissors"
@@ -22,6 +29,7 @@ function playRound(playerSelection, computerSelection) {
     console.log("You win!  Rock breaks scissors! :D");
     outputDiv.textContent = "You win!  Rock breaks scissors! :D";
     score++;
+    scoreDiv.textContent = score;
   } else if (
     playerSelection == "ROCK" &&
     computerSelection == "Rock"
@@ -36,12 +44,15 @@ function playRound(playerSelection, computerSelection) {
     console.log("You win!  Paper covers rock! :D");
     outputDiv.textContent = "You win!  Paper covers rock! :D";
     score++;
+    scoreDiv.textContent = score;
   } else if (
     playerSelection == "PAPER" &&
     computerSelection == "Scissors"
   ) {
     console.log("You lose!  Scissors cuts paper :/");
     outputDiv.textContent = "You lose!  Scissors cuts paper :/";
+    compScore++;
+    compScoreDiv.textContent = compScore;
   } else if (
     playerSelection == "PAPER" &&
     computerSelection == "Paper"
@@ -61,6 +72,8 @@ function playRound(playerSelection, computerSelection) {
   ) {
     console.log("You lose!  Rock beats scissors :/");
     outputDiv.textContent = "You lose!  Rock beats scissors :/";
+    compScore++;
+    compScoreDiv.textContent = compScore;
   } else if (
     playerSelection == "SCISSORS" &&
     computerSelection == "Paper"
@@ -68,6 +81,7 @@ function playRound(playerSelection, computerSelection) {
     console.log("You win!  Scissors cuts paper! :D");
     outputDiv.textContent = "You win!  Scissors cuts paper! :D";
     score++;
+    scoreDiv.textContent = score;
   }
 }
 
@@ -75,7 +89,7 @@ function playRound(playerSelection, computerSelection) {
 // const computerSelection = getComputerChoice();
 // // console.log(playRound(playerSelection, computerSelection));
 // playRound(playerSelection, computerSelection);
-let score = 0;
+
 
 function game() {
   // for (let i = 0; i < 5; i++) {
