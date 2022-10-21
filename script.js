@@ -1,14 +1,14 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
 let playerSelection = "";
-const computerSelection = getComputerChoice();
+// const computerSelection = getComputerChoice();
 
 const outputDiv = document.querySelector('.output');
 
 function getComputerChoice() {
   const random = Math.floor(Math.random() * choices.length);
   return choices[random];
-}
+};
 
 function playRound(playerSelection, computerSelection) {
   // playerSelection = Rock
@@ -93,6 +93,7 @@ function game() {
 const rockBtn = document.getElementById("rock");
 rockBtn.addEventListener("click", () => {
   playerSelection = "ROCK";
+  const computerSelection = getComputerChoice();
   playRound(playerSelection, computerSelection);
   console.log(playerSelection);
 });
@@ -101,6 +102,7 @@ rockBtn.addEventListener("click", () => {
 const paperBtn = document.getElementById("paper");
 paperBtn.addEventListener("click", () => {
   playerSelection = "PAPER";
+  const computerSelection = getComputerChoice();
   playRound(playerSelection, computerSelection);
   console.log(playerSelection);
 });
@@ -109,6 +111,7 @@ paperBtn.addEventListener("click", () => {
 const scissorsBtn = document.getElementById("scissors");
 scissorsBtn.addEventListener("click", () => {
   playerSelection = "SCISSORS";
+  const computerSelection = getComputerChoice();
   playRound(playerSelection, computerSelection);
   console.log(playerSelection);
 });
