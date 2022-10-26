@@ -1,5 +1,6 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
+// Defines initial values of variables
 let playerSelection = "";
 let score = 0;
 let compScore = 0;
